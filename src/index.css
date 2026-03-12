@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom selection color for that premium feel */
+::selection {
+  background: rgba(255, 184, 0, 0.3);
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ─── Compass Rose Pulse Glow ─── */
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 30px rgba(255, 184, 0, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 60px rgba(255, 184, 0, 0.8));
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* ─── Ghost Text (stroke outline only) ─── */
+.text-ghost {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12);
+  color: transparent;
+}
+
+/* ─── 3D perspective support ─── */
+.perspective-\[1000px\] {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
